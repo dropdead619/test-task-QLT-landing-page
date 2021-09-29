@@ -3,6 +3,8 @@
 
 $golden: #dba682;
 $darkblue: #17376a;
+$dark: #001122;
+
 
 html {
   font-size: 14px;
@@ -11,94 +13,486 @@ html {
 body {
   font-family: "Gotham Pro", sans-serif;
   color: white;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
 }
 
-main {
-  width: 100%;
-  position: relative;
-  background-image: url(assets/images/main_bg.png);
+.page-btn {
+  cursor: pointer;
 
-  .gradient-layer {
+  font: {
+    weight: 700;
+    family: Gotham Pro;
+    size: 1rem;
+  }
+}
+
+.page-h2 {
+  font-size: 1.8rem;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+
+  .page-lines {
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
-    opacity: .7;
     position: absolute;
-    z-index: 0;
-  }
-  .container {
-    padding: 62px 0px 230px 0px;
-    .head-panel {
-      z-index: 20;
+    z-index: 5;
+
+    div {
       width: 100%;
-      margin-bottom: 195px;
-      .time-counter {
-        z-index: 1;
-        max-width: 346px;
+      height: 100%;
+      border-left: 1px solid #D8D8EB;
+      border-right: 1px solid #D8D8EB;
+    }
+  }
+}
+
+
+//            Main page          //
+main {
+  position: relative;
+
+  .main-page {
+    width: 100%;
+    position: relative;
+    background: center / cover url(assets/images/main_bg.png) no-repeat;
+    z-index: 0;
+
+    &::before {
+      background: right bottom url(assets/images/logotype_2.png) no-repeat;
+      content: '';
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 4;
+    }
+
+    .gradient-layer {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+      opacity: 0.9;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .container {
+      position: relative;
+      z-index: 100;
+      padding: 62px 0px 230px 0px;
+
+      .head-panel {
+        z-index: 20;
         width: 100%;
-        font: {
-          size: 3.7rem;
-          weight: bold;
+        margin-bottom: 195px;
+
+        .time-counter {
+          max-width: 346px;
+          width: 100%;
+
+          font: {
+            size: 3.7rem;
+            weight: bold;
+          }
+
+          div+div::before {
+            content: ":";
+            margin: 0px 8px;
+          }
         }
-        div + div::before {
-          content: ":";
-          margin: 0px 8px;
+
+        .time-counter-definitions {
+          p:first-of-type {
+            margin-left: 20px;
+          }
+        }
+
+        .lang-panel {
+          max-width: 300px;
+          width: 100%;
+
+          li {
+            border: 1px solid white;
+            padding: 13px 10px;
+            font-weight: bold;
+            line-height: 13px;
+          }
+
+          .active-lang {
+            background-color: white;
+            color: $darkblue;
+          }
         }
       }
-      .lang-panel {
-        max-width: 300px;
-        width: 100%;
-        li {
-          border: 1px solid white;
-          padding: 13px 10px;
-          font-weight: bold;
-          line-height: 13px;
+
+      .head-content-container {
+        ul {
+          max-width: 300px;
+          width: 100%;
+
+          li {
+            font-weight: bold;
+            font-size: 1.25rem;
+            line-height: 32.7%;
+            text-transform: uppercase;
+            margin-bottom: 42px;
+          }
         }
-        .active-lang {
-          background-color: white;
-          color: $darkblue;
+
+        .head-content {
+          max-width: 700px;
+          width: 100%;
+
+          .content-logo {
+            width: 100%;
+            height: 154px;
+            margin-bottom: 26px;
+            background: right 50% url(assets/images/logotype_1.png);
+          }
+
+          p {
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            margin-bottom: 26px;
+            font-size: 16px;
+            line-height: 1.3rem;
+            text-align: justify;
+          }
+
+          button {
+            border: none;
+            padding: 18px 58px;
+            color: white;
+            background-color: $golden;
+            transition: .3s;
+
+            &:hover {
+              background-color: #f7e7de;
+              color: $golden;
+            }
+          }
         }
       }
     }
-    .head-content-container {
-      ul {
-        max-width: 300px;
-        width: 100%;
-        li {
-          font-weight: bold;
-          font-size: 1.25rem;
-          line-height: 32.7%;
-          text-transform: uppercase;
-          margin-bottom: 42px;
+  }
+}
+
+//         About conference          //
+.about-conference {
+  padding: 62px 0px 47px 0px;
+  color: $dark;
+
+  p {
+    font-size: 1rem;
+    line-height: 20px;
+    text-align: justify;
+  }
+
+  >p {
+    margin-bottom: 30px;
+  }
+
+  .conference-content {
+    margin-bottom: 40px;
+
+    .conference-text {
+      max-width: 585px;
+      width: 100%;
+
+      h2 {
+        margin-bottom: 17px;
+      }
+
+      .fa-ellipsis-h {
+        font-family: 'Font Awesome 5 free', sans-serif;
+        color: $golden;
+        font-size: 1.4rem;
+        margin-bottom: 17px;
+      }
+
+      p {
+        &:first-of-type {
+          margin-bottom: 20px;
         }
       }
-      .head-content {
-        max-width: 700px;
+    }
+
+    .conference-picture {
+      max-width: 544px;
+      width: 100%;
+      height: 307px;
+      background: no-repeat url(assets/images/conference_image.png);
+    }
+  }
+}
+
+//           Conference program page and Venues container          //
+.program-places-container {
+  padding-top: 78px;
+  background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+
+  .aside-logo {
+    background: -0.8% 22% url(assets/images/logotype_3.png) no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &::before {
+    background: right bottom url(assets/images/logotype_2.png) no-repeat;
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  //           Conference program page          //
+  .conference-program {
+    position: relative;
+    z-index: 10;
+
+    .conference-program-head {
+      margin-bottom: 72px;
+
+      .program-title {
+        h2 {
+          margin-bottom: 21px;
+        }
+
+        .fa-ellipsis-h {
+          font-family: 'Font Awesome 5 free', sans-serif;
+          color: $golden;
+          font-size: 1.4rem;
+        }
+      }
+
+      button {
+        padding: 13.5px 22px 13.5px 30px;
+        background-color: transparent;
+        border: 1px solid $golden;
+        color: $golden;
+      }
+    }
+
+    .conference-program-content {
+      background-color: white;
+      color: $dark;
+      padding: 60px 70px 111px 70px;
+
+      .program-dates {
+        max-width: 520px;
         width: 100%;
-        .content-logo {
-          width: 100%;
-          height: 154px;
-          margin-bottom: 26px;
-          background: right 50% url(assets/images/logotype_1.png);
+        margin-bottom: 74px;
+        border-bottom: 1px solid #D8D8EB;
+
+        div {
+          font-weight: bold;
+          line-height: 23px;
+          color: #D8D8EB;
+          padding-bottom: 15px;
         }
-        p {
-          font-family: "Roboto", sans-serif;
-          font-style: normal;
-          font-weight: normal;
-          margin-bottom: 26px;
-          font-size: 16px;
-          line-height: 1.3rem;
-          text-align: justify;
+
+        .active-date {
+          color: $golden;
+          border-bottom: 2px solid $golden;
+          position: relative;
+
+          &::before {
+            content: '\f078';
+            position: absolute;
+            bottom: -17px;
+            left: 45%;
+            font-family: 'Font Awesome 5 free', sans-serif;
+            color: $golden;
+          }
         }
-        button {
-          padding: 18px 58px;
+      }
+
+      .program-descriptions {
+        .description-card {
+          margin-bottom: 26px;
+
+          &:last-of-type {
+            margin-bottom: 48px;
+          }
+
+          .place-and-time {
+            padding: 13px 30px 8px 30px;
+            border: 1px solid #D8D8EB;
+            border-bottom: none;
+
+            .place-and-time-element {
+              margin-right: 19px;
+
+              h4 {
+                font-weight: normal;
+                font-size: 14px;
+                line-height: 23px;
+                color: $golden;
+              }
+            }
+          }
+
+          .program-dropdown-content {
+            padding: 26px 34px 22px 30px;
+            border: 1px solid #D8D8EB;
+
+            h3 {
+              font-weight: bold;
+              font-size: 1.3rem;
+              line-height: 23px;
+              position: relative;
+              cursor: pointer;
+
+            }
+
+            .active-dropdown {
+              &::before {
+                content: '\f077';
+                position: absolute;
+                right: -2%;
+                font-family: 'Font Awesome 5 free', sans-serif;
+              }
+
+              &+.dropdown-paragraph {
+                margin-top: 12px;
+              }
+            }
+
+            .disabled-dropdown {
+              &::before {
+                content: '\f078';
+                position: absolute;
+                right: -2%;
+                font-family: 'Font Awesome 5 free', sans-serif;
+              }
+            }
+
+          }
+        }
+
+        .page-btn {
           color: white;
           background-color: $golden;
-          border: none;
+          border: 1px solid transparent;
+          padding: 13.5px 52px 13.5px 60px;
+          transition: .3s;
+
+          &:hover {
+            border: 1px solid $golden;
+            background-color: #ffffff;
+            color: $golden;
+          }
+        }
+      }
+    }
+  }
+
+  // VENUES //
+  .venues {
+    position: relative;
+    z-index: 10;
+    padding: 136px 0px 212px 0px;
+
+    .venues-title {
+      margin-bottom: 57px;
+
+      h2 {
+        margin-bottom: 21px;
+      }
+
+      .fa-ellipsis-h {
+        font-family: 'Font Awesome 5 free', sans-serif;
+        color: $golden;
+        font-size: 1.4rem;
+      }
+    }
+
+    .venues-gallery {
+      .venue-card {
+        max-width: 270px;
+        width: 100%;
+        height: 400.82px;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          content: '';
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          background: linear-gradient(360deg, rgba(238, 169, 131, 0.74) 22.12%, rgba(196, 196, 196, 0) 52.77%);
+          mix-blend-mode: multiply;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          transition: .3s;
+
+          &::before {
+            display: none !important;
+          }
+        }
+
+        &::before {
+          position: absolute;
+          max-width: 205px;
+
           font: {
             weight: bold;
-            family: Gotham Pro;
-            size: 1rem;
+            style: normal;
+            size: 20px;
+          }
+
+          line-height: 19px;
+          bottom: 36px;
+          left: 19px;
+          text-transform: uppercase;
+          z-index: 10;
+        }
+
+        &:nth-child(1) {
+          background: url(assets/images/venue_1.png);
+
+          &::before {
+            content: 'Конгресс-Центр Астана';
+          }
+
+        }
+
+        &:nth-child(2) {
+          background: url(assets/images/venue_2.png);
+
+          &::before {
+            content: 'отель hilton astana';
+          }
+        }
+
+        &:nth-child(3) {
+          background: url(assets/images/venue_3.png);
+
+          &::before {
+            content: 'мфца (блок с4.4)';
+          }
+        }
+
+        &:nth-child(4) {
+          background: url(assets/images/venue_4.png);
+
+          &::before {
+            content: 'Выставочный центр корме';
           }
         }
       }

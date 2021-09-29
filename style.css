@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -56,6 +57,10 @@ ul {
   align-items: flex-end;
 }
 
+.flex-direction-col {
+  flex-direction: column;
+}
+
 html {
   font-size: 14px;
 }
@@ -63,76 +68,124 @@ html {
 body {
   font-family: "Gotham Pro", sans-serif;
   color: white;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-btn {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Gotham Pro;
+  font-size: 1rem;
+}
+
+.page-h2 {
+  font-size: 1.8rem;
+  line-height: 23px;
+  text-transform: uppercase;
+}
+
+.container {
+  position: relative;
+}
+.container .page-lines {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 5;
+}
+.container .page-lines div {
+  width: 100%;
+  height: 100%;
+  border-left: 1px solid #D8D8EB;
+  border-right: 1px solid #D8D8EB;
 }
 
 main {
+  position: relative;
+}
+main .main-page {
   width: 100%;
   position: relative;
-  background-image: url(assets/images/main_bg.png);
-}
-main .gradient-layer {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
-  opacity: 0.7;
-  position: absolute;
+  background: center/cover url(assets/images/main_bg.png) no-repeat;
   z-index: 0;
 }
-main .container {
+main .main-page::before {
+  background: right bottom url(assets/images/logotype_2.png) no-repeat;
+  content: "";
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 4;
+}
+main .main-page .gradient-layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+  opacity: 0.9;
+  position: absolute;
+  z-index: 1;
+}
+main .main-page .container {
+  position: relative;
+  z-index: 100;
   padding: 62px 0px 230px 0px;
 }
-main .container .head-panel {
+main .main-page .container .head-panel {
   z-index: 20;
   width: 100%;
   margin-bottom: 195px;
 }
-main .container .head-panel .time-counter {
-  z-index: 1;
+main .main-page .container .head-panel .time-counter {
   max-width: 346px;
   width: 100%;
   font-size: 3.7rem;
   font-weight: bold;
 }
-main .container .head-panel .time-counter div + div::before {
+main .main-page .container .head-panel .time-counter div + div::before {
   content: ":";
   margin: 0px 8px;
 }
-main .container .head-panel .lang-panel {
+main .main-page .container .head-panel .time-counter-definitions p:first-of-type {
+  margin-left: 20px;
+}
+main .main-page .container .head-panel .lang-panel {
   max-width: 300px;
   width: 100%;
 }
-main .container .head-panel .lang-panel li {
+main .main-page .container .head-panel .lang-panel li {
   border: 1px solid white;
   padding: 13px 10px;
   font-weight: bold;
   line-height: 13px;
 }
-main .container .head-panel .lang-panel .active-lang {
+main .main-page .container .head-panel .lang-panel .active-lang {
   background-color: white;
   color: #17376a;
 }
-main .container .head-content-container ul {
+main .main-page .container .head-content-container ul {
   max-width: 300px;
   width: 100%;
 }
-main .container .head-content-container ul li {
+main .main-page .container .head-content-container ul li {
   font-weight: bold;
   font-size: 1.25rem;
   line-height: 32.7%;
   text-transform: uppercase;
   margin-bottom: 42px;
 }
-main .container .head-content-container .head-content {
+main .main-page .container .head-content-container .head-content {
   max-width: 700px;
   width: 100%;
 }
-main .container .head-content-container .head-content .content-logo {
+main .main-page .container .head-content-container .head-content .content-logo {
   width: 100%;
   height: 154px;
   margin-bottom: 26px;
   background: right 50% url(assets/images/logotype_1.png);
 }
-main .container .head-content-container .head-content p {
+main .main-page .container .head-content-container .head-content p {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -141,14 +194,261 @@ main .container .head-content-container .head-content p {
   line-height: 1.3rem;
   text-align: justify;
 }
-main .container .head-content-container .head-content button {
+main .main-page .container .head-content-container .head-content button {
+  border: none;
   padding: 18px 58px;
   color: white;
   background-color: #dba682;
-  border: none;
-  font-weight: bold;
-  font-family: Gotham Pro;
+  transition: 0.3s;
+}
+main .main-page .container .head-content-container .head-content button:hover {
+  background-color: #f7e7de;
+  color: #dba682;
+}
+
+.about-conference {
+  padding: 62px 0px 47px 0px;
+  color: #001122;
+}
+.about-conference p {
   font-size: 1rem;
+  line-height: 20px;
+  text-align: justify;
+}
+.about-conference > p {
+  margin-bottom: 30px;
+}
+.about-conference .conference-content {
+  margin-bottom: 40px;
+}
+.about-conference .conference-content .conference-text {
+  max-width: 585px;
+  width: 100%;
+}
+.about-conference .conference-content .conference-text h2 {
+  margin-bottom: 17px;
+}
+.about-conference .conference-content .conference-text .fa-ellipsis-h {
+  font-family: "Font Awesome 5 free", sans-serif;
+  color: #dba682;
+  font-size: 1.4rem;
+  margin-bottom: 17px;
+}
+.about-conference .conference-content .conference-text p:first-of-type {
+  margin-bottom: 20px;
+}
+.about-conference .conference-content .conference-picture {
+  max-width: 544px;
+  width: 100%;
+  height: 307px;
+  background: no-repeat url(assets/images/conference_image.png);
+}
+
+.program-places-container {
+  padding-top: 78px;
+  background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+.program-places-container .aside-logo {
+  background: -0.8% 22% url(assets/images/logotype_3.png) no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.program-places-container::before {
+  background: right bottom url(assets/images/logotype_2.png) no-repeat;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+.program-places-container .conference-program {
+  position: relative;
+  z-index: 10;
+}
+.program-places-container .conference-program .conference-program-head {
+  margin-bottom: 72px;
+}
+.program-places-container .conference-program .conference-program-head .program-title h2 {
+  margin-bottom: 21px;
+}
+.program-places-container .conference-program .conference-program-head .program-title .fa-ellipsis-h {
+  font-family: "Font Awesome 5 free", sans-serif;
+  color: #dba682;
+  font-size: 1.4rem;
+}
+.program-places-container .conference-program .conference-program-head button {
+  padding: 13.5px 22px 13.5px 30px;
+  background-color: transparent;
+  border: 1px solid #dba682;
+  color: #dba682;
+}
+.program-places-container .conference-program .conference-program-content {
+  background-color: white;
+  color: #001122;
+  padding: 60px 70px 111px 70px;
+}
+.program-places-container .conference-program .conference-program-content .program-dates {
+  max-width: 520px;
+  width: 100%;
+  margin-bottom: 74px;
+  border-bottom: 1px solid #D8D8EB;
+}
+.program-places-container .conference-program .conference-program-content .program-dates div {
+  font-weight: bold;
+  line-height: 23px;
+  color: #D8D8EB;
+  padding-bottom: 15px;
+}
+.program-places-container .conference-program .conference-program-content .program-dates .active-date {
+  color: #dba682;
+  border-bottom: 2px solid #dba682;
+  position: relative;
+}
+.program-places-container .conference-program .conference-program-content .program-dates .active-date::before {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 45%;
+  font-family: "Font Awesome 5 free", sans-serif;
+  color: #dba682;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card {
+  margin-bottom: 26px;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card:last-of-type {
+  margin-bottom: 48px;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .place-and-time {
+  padding: 13px 30px 8px 30px;
+  border: 1px solid #D8D8EB;
+  border-bottom: none;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .place-and-time .place-and-time-element {
+  margin-right: 19px;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .place-and-time .place-and-time-element h4 {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 23px;
+  color: #dba682;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content {
+  padding: 26px 34px 22px 30px;
+  border: 1px solid #D8D8EB;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content h3 {
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 23px;
+  position: relative;
+  cursor: pointer;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .active-dropdown::before {
+  content: "";
+  position: absolute;
+  right: -2%;
+  font-family: "Font Awesome 5 free", sans-serif;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .active-dropdown + .dropdown-paragraph {
+  margin-top: 12px;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .disabled-dropdown::before {
+  content: "";
+  position: absolute;
+  right: -2%;
+  font-family: "Font Awesome 5 free", sans-serif;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .page-btn {
+  color: white;
+  background-color: #dba682;
+  border: 1px solid transparent;
+  padding: 13.5px 52px 13.5px 60px;
+  transition: 0.3s;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .page-btn:hover {
+  border: 1px solid #dba682;
+  background-color: #ffffff;
+  color: #dba682;
+}
+.program-places-container .venues {
+  position: relative;
+  z-index: 10;
+  padding: 136px 0px 212px 0px;
+}
+.program-places-container .venues .venues-title {
+  margin-bottom: 57px;
+}
+.program-places-container .venues .venues-title h2 {
+  margin-bottom: 21px;
+}
+.program-places-container .venues .venues-title .fa-ellipsis-h {
+  font-family: "Font Awesome 5 free", sans-serif;
+  color: #dba682;
+  font-size: 1.4rem;
+}
+.program-places-container .venues .venues-gallery .venue-card {
+  max-width: 270px;
+  width: 100%;
+  height: 400.82px;
+  position: relative;
+  cursor: pointer;
+}
+.program-places-container .venues .venues-gallery .venue-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(360deg, rgba(238, 169, 131, 0.74) 22.12%, rgba(196, 196, 196, 0) 52.77%);
+  mix-blend-mode: multiply;
+}
+.program-places-container .venues .venues-gallery .venue-card:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.program-places-container .venues .venues-gallery .venue-card:hover::before {
+  display: none !important;
+}
+.program-places-container .venues .venues-gallery .venue-card::before {
+  position: absolute;
+  max-width: 205px;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 19px;
+  bottom: 36px;
+  left: 19px;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(1) {
+  background: url(assets/images/venue_1.png);
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(1)::before {
+  content: "Конгресс-Центр Астана";
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(2) {
+  background: url(assets/images/venue_2.png);
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(2)::before {
+  content: "отель hilton astana";
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(3) {
+  background: url(assets/images/venue_3.png);
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(3)::before {
+  content: "мфца (блок с4.4)";
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(4) {
+  background: url(assets/images/venue_4.png);
+}
+.program-places-container .venues .venues-gallery .venue-card:nth-child(4)::before {
+  content: "Выставочный центр корме";
 }
 
 /*# sourceMappingURL=style.css.map */
