@@ -1,0 +1,56 @@
+//base
+@import "./base/base";
+
+$golden: #dba682;
+$darkblue: #17376a;
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Gotham Pro", sans-serif;
+  color: white;
+}
+
+main {
+  width: 100%;
+  //background-image: url(assets/images/main_bg.png);
+  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+  .gradient-layer {
+    .container {
+      padding: 62px 0px 230px 0px;
+      .head-panel {
+        width: 100%;
+        margin-bottom: 195px;
+        .time-counter {
+          max-width: 346px;
+          width: 100%;
+          font: {
+            size: 3.7rem;
+            weight: bold;
+          }
+          div + div::before {
+            content: ":";
+            margin: 0px 8px;
+          }
+        }
+        .lang-panel {
+          max-width: 300px;
+          width: 100%;
+            
+          li {
+            border: 1px solid white;
+            padding: 13px 10px;
+            font-weight: bold;
+            line-height: 13px;
+          }
+          .active-lang {
+            background-color: white;
+            color: $darkblue;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  max-width: 1920px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.align-items-start {
+  align-items: flex-start;
+}
+
+.align-items-end {
+  align-items: flex-end;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: "Gotham Pro", sans-serif;
+  color: white;
+}
+
+main {
+  width: 100%;
+  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+}
+main .gradient-layer .container {
+  padding: 62px 0px 230px 0px;
+}
+main .gradient-layer .container .head-panel {
+  width: 100%;
+  margin-bottom: 195px;
+}
+main .gradient-layer .container .head-panel .time-counter {
+  max-width: 346px;
+  width: 100%;
+  font-size: 3.7rem;
+  font-weight: bold;
+}
+main .gradient-layer .container .head-panel .time-counter div + div::before {
+  content: ":";
+  margin: 0px 8px;
+}
+main .gradient-layer .container .head-panel .lang-panel {
+  max-width: 300px;
+  width: 100%;
+}
+main .gradient-layer .container .head-panel .lang-panel li {
+  border: 1px solid white;
+  padding: 13px 10px;
+  font-weight: bold;
+  line-height: 13px;
+}
+main .gradient-layer .container .head-panel .lang-panel .active-lang {
+  background-color: white;
+  color: #17376a;
+}
+
+/*# sourceMappingURL=style.css.map */
