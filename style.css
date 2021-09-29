@@ -67,38 +67,88 @@ body {
 
 main {
   width: 100%;
-  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+  position: relative;
+  background-image: url(assets/images/main_bg.png);
 }
-main .gradient-layer .container {
+main .gradient-layer {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+  opacity: 0.7;
+  position: absolute;
+  z-index: 0;
+}
+main .container {
   padding: 62px 0px 230px 0px;
 }
-main .gradient-layer .container .head-panel {
+main .container .head-panel {
+  z-index: 20;
   width: 100%;
   margin-bottom: 195px;
 }
-main .gradient-layer .container .head-panel .time-counter {
+main .container .head-panel .time-counter {
+  z-index: 1;
   max-width: 346px;
   width: 100%;
   font-size: 3.7rem;
   font-weight: bold;
 }
-main .gradient-layer .container .head-panel .time-counter div + div::before {
+main .container .head-panel .time-counter div + div::before {
   content: ":";
   margin: 0px 8px;
 }
-main .gradient-layer .container .head-panel .lang-panel {
+main .container .head-panel .lang-panel {
   max-width: 300px;
   width: 100%;
 }
-main .gradient-layer .container .head-panel .lang-panel li {
+main .container .head-panel .lang-panel li {
   border: 1px solid white;
   padding: 13px 10px;
   font-weight: bold;
   line-height: 13px;
 }
-main .gradient-layer .container .head-panel .lang-panel .active-lang {
+main .container .head-panel .lang-panel .active-lang {
   background-color: white;
   color: #17376a;
+}
+main .container .head-content-container ul {
+  max-width: 300px;
+  width: 100%;
+}
+main .container .head-content-container ul li {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: 32.7%;
+  text-transform: uppercase;
+  margin-bottom: 42px;
+}
+main .container .head-content-container .head-content {
+  max-width: 700px;
+  width: 100%;
+}
+main .container .head-content-container .head-content .content-logo {
+  width: 100%;
+  height: 154px;
+  margin-bottom: 26px;
+  background: right 50% url(assets/images/logotype_1.png);
+}
+main .container .head-content-container .head-content p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  margin-bottom: 26px;
+  font-size: 16px;
+  line-height: 1.3rem;
+  text-align: justify;
+}
+main .container .head-content-container .head-content button {
+  padding: 18px 58px;
+  color: white;
+  background-color: #dba682;
+  border: none;
+  font-weight: bold;
+  font-family: Gotham Pro;
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */

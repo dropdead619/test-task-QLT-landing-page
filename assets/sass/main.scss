@@ -15,39 +15,90 @@ body {
 
 main {
   width: 100%;
-  //background-image: url(assets/images/main_bg.png);
-  background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+  position: relative;
+  background-image: url(assets/images/main_bg.png);
+
   .gradient-layer {
-    .container {
-      padding: 62px 0px 230px 0px;
-      .head-panel {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #1a2e3a 0%, #345b75 100%);
+    opacity: .7;
+    position: absolute;
+    z-index: 0;
+  }
+  .container {
+    padding: 62px 0px 230px 0px;
+    .head-panel {
+      z-index: 20;
+      width: 100%;
+      margin-bottom: 195px;
+      .time-counter {
+        z-index: 1;
+        max-width: 346px;
         width: 100%;
-        margin-bottom: 195px;
-        .time-counter {
-          max-width: 346px;
-          width: 100%;
-          font: {
-            size: 3.7rem;
-            weight: bold;
-          }
-          div + div::before {
-            content: ":";
-            margin: 0px 8px;
-          }
+        font: {
+          size: 3.7rem;
+          weight: bold;
         }
-        .lang-panel {
-          max-width: 300px;
+        div + div::before {
+          content: ":";
+          margin: 0px 8px;
+        }
+      }
+      .lang-panel {
+        max-width: 300px;
+        width: 100%;
+        li {
+          border: 1px solid white;
+          padding: 13px 10px;
+          font-weight: bold;
+          line-height: 13px;
+        }
+        .active-lang {
+          background-color: white;
+          color: $darkblue;
+        }
+      }
+    }
+    .head-content-container {
+      ul {
+        max-width: 300px;
+        width: 100%;
+        li {
+          font-weight: bold;
+          font-size: 1.25rem;
+          line-height: 32.7%;
+          text-transform: uppercase;
+          margin-bottom: 42px;
+        }
+      }
+      .head-content {
+        max-width: 700px;
+        width: 100%;
+        .content-logo {
           width: 100%;
-            
-          li {
-            border: 1px solid white;
-            padding: 13px 10px;
-            font-weight: bold;
-            line-height: 13px;
-          }
-          .active-lang {
-            background-color: white;
-            color: $darkblue;
+          height: 154px;
+          margin-bottom: 26px;
+          background: right 50% url(assets/images/logotype_1.png);
+        }
+        p {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          margin-bottom: 26px;
+          font-size: 16px;
+          line-height: 1.3rem;
+          text-align: justify;
+        }
+        button {
+          padding: 18px 58px;
+          color: white;
+          background-color: $golden;
+          border: none;
+          font: {
+            weight: bold;
+            family: Gotham Pro;
+            size: 1rem;
           }
         }
       }
