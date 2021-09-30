@@ -32,6 +32,18 @@ ul {
   max-width: 1170px;
   width: 100%;
   margin: 0 auto;
+  @media (max-width: 1200px ) {
+    max-width:  992px;
+  }
+  @media (max-width: 992px ) {
+    max-width:  768px;
+  }
+  @media (max-width: 768px ) {
+    max-width:  576px;
+  }
+  @media (max-width: 576px ) {
+    max-width:  440px;
+  }
 }
 
 .d-flex {

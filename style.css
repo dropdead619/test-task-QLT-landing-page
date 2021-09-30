@@ -33,6 +33,26 @@ ul {
   width: 100%;
   margin: 0 auto;
 }
+@media (max-width: 1200px) {
+  .container {
+    max-width: 992px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    max-width: 440px;
+  }
+}
 
 .d-flex {
   display: flex;
@@ -149,6 +169,12 @@ main .main-page .container .head-panel {
   width: 100%;
   margin-bottom: 195px;
 }
+@media (max-width: 768px) {
+  main .main-page .container .head-panel {
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
 main .main-page .container .head-panel .time-counter {
   width: 346px;
   position: relative;
@@ -186,6 +212,11 @@ main .main-page .container .head-panel .lang-panel li {
 main .main-page .container .head-panel .lang-panel .active-lang {
   background-color: white;
   color: #17376a;
+}
+@media (max-width: 992px) {
+  main .main-page .container .head-content-container {
+    flex-direction: column !important;
+  }
 }
 main .main-page .container .head-content-container ul {
   max-width: 300px;
@@ -250,6 +281,11 @@ main .main-page .container .head-content-container .head-content button:hover {
 .about-conference .conference-content {
   margin-bottom: 40px;
 }
+@media (max-width: 992px) {
+  .about-conference .conference-content {
+    flex-direction: column !important;
+  }
+}
 .about-conference .conference-content .conference-text {
   position: relative;
   z-index: 11;
@@ -288,7 +324,7 @@ main .main-page .container .head-content-container .head-content button:hover {
   top: -500px;
 }
 .program-places-container .aside-logo {
-  background: -0.8% 22% url(assets/images/logotype_3.png) no-repeat;
+  background: -40px 280px url(assets/images/logotype_3.png) no-repeat;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -431,12 +467,23 @@ main .main-page .container .head-content-container .head-content button:hover {
   color: #dba682;
   font-size: 1.4rem;
 }
+@media (max-width: 992px) {
+  .program-places-container .venues .venues-gallery {
+    flex-direction: column !important;
+    align-items: center;
+  }
+}
 .program-places-container .venues .venues-gallery .venue-card {
   max-width: 270px;
   width: 100%;
   height: 400.82px;
   position: relative;
   cursor: pointer;
+}
+@media (max-width: 992px) {
+  .program-places-container .venues .venues-gallery .venue-card {
+    margin-bottom: 40px;
+  }
 }
 .program-places-container .venues .venues-gallery .venue-card::after {
   content: "";
