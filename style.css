@@ -25,6 +25,7 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 .container {
@@ -86,24 +87,35 @@ body {
   text-transform: uppercase;
 }
 
-.container {
-  position: relative;
-}
-.container .page-lines {
+.page-lines {
+  max-width: 1170px;
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 5;
+  z-index: 4;
+  opacity: 0.1;
 }
-.container .page-lines div {
+.page-lines div {
   width: 100%;
   height: 100%;
-  border-left: 1px solid #D8D8EB;
-  border-right: 1px solid #D8D8EB;
+  border-left: 2px solid #d8d8eb;
+  border-right: 2px solid #d8d8eb;
+}
+.page-lines div:first-of-type {
+  max-width: 285px;
+  border-right: none;
+}
+.page-lines div:last-of-type {
+  max-width: 285px;
+  border-left: none;
+}
+.page-lines div:nth-child(3) {
+  border-left: none;
 }
 
 main {
   position: relative;
+  z-index: 0;
 }
 main .main-page {
   width: 100%;
@@ -122,7 +134,7 @@ main .main-page::before {
 main .main-page .gradient-layer {
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+  background: linear-gradient(0deg, #001122 0%, #015c78 0.01%, #012a38 100%);
   opacity: 0.9;
   position: absolute;
   z-index: 1;
@@ -138,20 +150,30 @@ main .main-page .container .head-panel {
   margin-bottom: 195px;
 }
 main .main-page .container .head-panel .time-counter {
-  max-width: 346px;
-  width: 100%;
+  width: 346px;
+  position: relative;
+}
+main .main-page .container .head-panel .time-counter .counter-element-container {
+  position: relative;
+  text-align: center;
+}
+main .main-page .container .head-panel .time-counter .counter-element-container div {
   font-size: 3.7rem;
   font-weight: bold;
 }
-main .main-page .container .head-panel .time-counter div + div::before {
-  content: ":";
-  margin: 0px 8px;
+main .main-page .container .head-panel .time-counter .counter-element-container:last-of-type::before {
+  content: "";
+  right: 0;
 }
-main .main-page .container .head-panel .time-counter-definitions p:first-of-type {
-  margin-left: 20px;
+main .main-page .container .head-panel .time-counter .counter-element-container:before {
+  content: ":";
+  right: -22px;
+  position: absolute;
+  font-size: 3.7rem;
+  font-weight: bold;
 }
 main .main-page .container .head-panel .lang-panel {
-  max-width: 300px;
+  max-width: 268px;
   width: 100%;
 }
 main .main-page .container .head-panel .lang-panel li {
@@ -159,6 +181,7 @@ main .main-page .container .head-panel .lang-panel li {
   padding: 13px 10px;
   font-weight: bold;
   line-height: 13px;
+  cursor: pointer;
 }
 main .main-page .container .head-panel .lang-panel .active-lang {
   background-color: white;
@@ -174,6 +197,10 @@ main .main-page .container .head-content-container ul li {
   line-height: 32.7%;
   text-transform: uppercase;
   margin-bottom: 42px;
+  cursor: pointer;
+}
+main .main-page .container .head-content-container ul li:hover {
+  transform: scale(1.05) translateX(10px);
 }
 main .main-page .container .head-content-container .head-content {
   max-width: 700px;
@@ -209,6 +236,8 @@ main .main-page .container .head-content-container .head-content button:hover {
 .about-conference {
   padding: 62px 0px 47px 0px;
   color: #001122;
+  position: relative;
+  z-index: 10;
 }
 .about-conference p {
   font-size: 1rem;
@@ -222,6 +251,8 @@ main .main-page .container .head-content-container .head-content button:hover {
   margin-bottom: 40px;
 }
 .about-conference .conference-content .conference-text {
+  position: relative;
+  z-index: 11;
   max-width: 585px;
   width: 100%;
 }
@@ -238,6 +269,8 @@ main .main-page .container .head-content-container .head-content button:hover {
   margin-bottom: 20px;
 }
 .about-conference .conference-content .conference-picture {
+  position: relative;
+  z-index: 11;
   max-width: 544px;
   width: 100%;
   height: 307px;
@@ -246,10 +279,13 @@ main .main-page .container .head-content-container .head-content button:hover {
 
 .program-places-container {
   padding-top: 78px;
-  background: linear-gradient(0deg, #001122 0%, #015C78 0.01%, #012A38 100%);
+  background: linear-gradient(0deg, #001122 0%, #015c78 0.01%, #012a38 100%);
   position: relative;
   z-index: 0;
   overflow: hidden;
+}
+.program-places-container .page-lines {
+  top: -500px;
 }
 .program-places-container .aside-logo {
   background: -0.8% 22% url(assets/images/logotype_3.png) no-repeat;
@@ -296,12 +332,12 @@ main .main-page .container .head-content-container .head-content button:hover {
   max-width: 520px;
   width: 100%;
   margin-bottom: 74px;
-  border-bottom: 1px solid #D8D8EB;
+  border-bottom: 1px solid #d8d8eb;
 }
 .program-places-container .conference-program .conference-program-content .program-dates div {
   font-weight: bold;
   line-height: 23px;
-  color: #D8D8EB;
+  color: #d8d8eb;
   padding-bottom: 15px;
 }
 .program-places-container .conference-program .conference-program-content .program-dates .active-date {
@@ -319,13 +355,14 @@ main .main-page .container .head-content-container .head-content button:hover {
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card {
   margin-bottom: 26px;
+  width: 100%;
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card:last-of-type {
   margin-bottom: 48px;
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .place-and-time {
   padding: 13px 30px 8px 30px;
-  border: 1px solid #D8D8EB;
+  border: 1px solid #d8d8eb;
   border-bottom: none;
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .place-and-time .place-and-time-element {
@@ -339,7 +376,7 @@ main .main-page .container .head-content-container .head-content button:hover {
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content {
   padding: 26px 34px 22px 30px;
-  border: 1px solid #D8D8EB;
+  border: 1px solid #d8d8eb;
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content h3 {
   font-weight: bold;
@@ -356,6 +393,9 @@ main .main-page .container .head-content-container .head-content button:hover {
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .active-dropdown + .dropdown-paragraph {
   margin-top: 12px;
+}
+.program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .dropdown-paragraph {
+  display: none;
 }
 .program-places-container .conference-program .conference-program-content .program-descriptions .description-card .program-dropdown-content .disabled-dropdown::before {
   content: "";

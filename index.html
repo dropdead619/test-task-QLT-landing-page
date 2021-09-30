@@ -1,216 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="./assets/fonts/stylesheet.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/all.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="assets/scripts/main.js" defer></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
-  <link href="./assets/fonts/stylesheet.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="assets/css/all.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <main>
-    <div class="page-lines d-flex">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <div class="main-page">
-      <div class="gradient-layer"></div>
-      <div class="container">
-        <div class="head-panel d-flex justify-content-between align-items-center">
-          <div class="time-counter-container">
-            <div class="time-counter d-flex justify-content-between">
-              <div id="days">38</div>
-              <div id="hours">23</div>
-              <div id="minutes">12</div>
-              <div id="seconds">05</div>
+  <body>
+    <main>
+      <div class="main-page d-flex flex-direction-col align-items-center">
+        <div class="page-lines d-flex">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="gradient-layer"></div>
+        <div class="container">
+          <div
+            class="head-panel d-flex justify-content-between align-items-center"
+          >
+            <div class="time-counter-container">
+              <div class="time-counter d-flex justify-content-between">
+                <div class="counter-element-container">
+                  <div id="days">38</div>
+                  <p>дней</p>
+                </div>
+                <div class="counter-element-container">
+                  <div id="hours">23</div>
+                  <p>часов</p>
+                </div>
+                <div class="counter-element-container">
+                  <div id="minutes">12</div>
+                  <p>минут</p>
+                </div>
+                <div class="counter-element-container">
+                  <div id="seconds">05</div>
+                  <p>секунд</p>
+                </div>
+              </div>
             </div>
-            <div class="time-counter-definitions d-flex justify-content-between">
-              <p>дней</p>
-              <p>часов</p>
-              <p>минут</p>
-              <p>секунд</p>
+            <ul class="lang-panel d-flex justify-content-between">
+              <li class="active-lang">RU</li>
+              <li>KZ</li>
+              <li>EN</li>
+              <li>FR</li>
+              <li>SP</li>
+            </ul>
+          </div>
+          <div
+            class="
+              head-content-container
+              d-flex
+              justify-content-between
+              align-items-center
+            "
+          >
+            <ul>
+              <li>Деловая программа</li>
+              <li>Культурная программа</li>
+              <li>Место проведения</li>
+              <li>О казахстане</li>
+              <li>О столице г.Нур-Султан</li>
+              <li>Участникам</li>
+              <li>Медиа</li>
+            </ul>
+            <div class="head-content">
+              <div class="content-logo"></div>
+              <p>
+                Равным образом дальнейшее развитие различных форм деятельности
+                позволяет выполнять важные задания по разработке позиций,
+                занимаемых участниками в отношении поставленных задач. Задача
+                организации, в особенности же укрепление и развитие структуры в
+                значительной степени обуславливает создание существенных
+                финансовых и административных условий. Не следует, однако
+                забывать, что постоянное информационно-пропагандистское
+                обеспечение нашей деятельности играет важную роль в формировании
+                системы обучения кадров, соответствует насущным потребностям.
+                Товарищи! новая модель организационной деятельности позволяет
+                оценить значение соответствующий условий активизации. Товарищи!
+                постоянный количественный рост и сфера нашей активности
+                позволяет оценить значение форм развития.
+              </p>
+              <button class="page-btn">Подробнее</button>
             </div>
           </div>
-          <ul class="lang-panel d-flex justify-content-between">
-            <li class="active-lang">RU</li>
-            <li>KZ</li>
-            <li>EN</li>
-            <li>FR</li>
-            <li>SP</li>
-          </ul>
         </div>
-        <div class="
-            head-content-container
+      </div>
+      <section class="about-conference container">
+        <div
+          class="
+            conference-content
             d-flex
-            justify-content-between
             align-items-center
-          ">
-          <ul>
-            <li>Деловая программа</li>
-            <li>Культурная программа</li>
-            <li>Место проведения</li>
-            <li>О казахстане</li>
-            <li>О столице г.Нур-Султан</li>
-            <li>Участникам</li>
-            <li>Медиа</li>
-          </ul>
-          <div class="head-content">
-            <div class="content-logo"></div>
+            justify-content-between
+          "
+        >
+          <div class="page-lines d-flex">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="conference-text">
+            <h2 class="page-h2">О конференции</h2>
+            <i class="fas fa-ellipsis-h"></i>
             <p>
-              Равным образом дальнейшее развитие различных форм деятельности
-              позволяет выполнять важные задания по разработке позиций,
-              занимаемых участниками в отношении поставленных задач. Задача
-              организации, в особенности же укрепление и развитие структуры в
-              значительной степени обуславливает создание существенных
-              финансовых и административных условий. Не следует, однако
-              забывать, что постоянное информационно-пропагандистское
-              обеспечение нашей деятельности играет важную роль в формировании
-              системы обучения кадров, соответствует насущным потребностям.
-              Товарищи! новая модель организационной деятельности позволяет
-              оценить значение соответствующий условий активизации. Товарищи!
-              постоянный количественный рост и сфера нашей активности позволяет
-              оценить значение форм развития.
+              18 октября 2018 года в Женеве в ходе заседания Генерального совета
+              членами Всемирной торговой организации единогласно принято решение
+              о проведении 12-й Министерской конференции ВТО (далее – МК-12)
+              8-11 июня 2020 года в Республике Казахстан г. Нур-Султан.
             </p>
-            <button class="page-btn">Подробнее</button>
+            <p>
+              29 октября 2019 г. в рамках визита Министра торговли и интеграции
+              РК Б. Султанова в Женеву состоялось подписание Соглашения между
+              Казахстаном и ВТО о проведении МК-12 ВТО.  Генеральный директор
+              ВТО Р. Азеведо подчеркнул, что подписание Соглашения является
+              четким сигналом приверженности Казахстана принципам многосторонней
+              торговой системы и правилам ВТО.
+            </p>
+          </div>
+          <div class="conference-picture"></div>
+        </div>
+        <p>
+          Учитывая опыт в организации крупномасштабных мероприятий,
+          соответствующий статус и материально-техническое обеспечение,
+          поручением Главы Государства (от 21 мая 2019 г.) АО «НК
+          «QazExpoCongress» определена в качестве основного технического
+          исполнителя и оператора бюджета МК-12.
+        </p>
+        <p>
+          Деловой центр ЭКСПО - это кластер с единым архитектурным решением,
+          который объединяет в себе деловые, образовательные,
+          конгрессно-выставочные, а также развлекательные проекты в одном
+          комплексе.
+        </p>
+        <p>
+          Впервые за время проведения Министерских конференций, мероприятие
+          будет проводиться на территории единого комплекса, где в пешей
+          доступности находятся все объекты конференции, а также в удобных
+          пространствах расположены отель, рестораны и кафе, в том числе Сфера
+          «Нур-Алем», что делает удобным пребывание участников МК-12 на
+          территории Делового центра ЭКСПО. Для проведения МК-12 ВТО определены
+          4 локации на территории делового центра ЭКСПО: Международный
+          выставочный центр, Конгресс-центр, отель «Хилтон Астана» и МФЦА блок
+          С.4.4.
+        </p>
+      </section>
+    </main>
+    <div
+      class="
+        program-places-container
+        d-flex
+        flex-direction-col
+        align-items-center
+      "
+    >
+      <div class="page-lines d-flex">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="aside-logo"></div>
+      <section class="conference-program container">
+        <div class="conference-program-head d-flex justify-content-between">
+          <div class="program-title">
+            <h2 class="page-h2">Программа конференции</h2>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <button class="page-btn">Культурная программа</button>
+        </div>
+        <div
+          class="
+            conference-program-content
+            d-flex
+            flex-direction-col
+            align-items-center
+          "
+        >
+          <div class="program-dates d-flex justify-content-between">
+            <div>Среда 5.05.2020</div>
+            <div class="active-date">Четверг 6.05.2020</div>
+            <div>Пятница 7.05.2020</div>
+          </div>
+          <div
+            class="
+              program-descriptions
+              d-flex
+              flex-direction-col
+              align-items-center
+            "
+          >
+            <div class="description-card">
+              <div class="place-and-time d-flex">
+                <div class="place-and-time-element">
+                  <h4>Время</h4>
+                  <p>10:30 - 12:00</p>
+                </div>
+                <div class="place-and-time-element">
+                  <h4>Место проведения</h4>
+                  <p>Отель Hilton Astana</p>
+                </div>
+              </div>
+              <div class="program-dropdown-content">
+                <h3 class="disabled-dropdown">
+                  Замедление глобальной экономики: как избежать масштабной
+                  рецессии?
+                </h3>
+                <div class="dropdown-paragraph">
+                  Учитывая опыт в организации крупномасштабных мероприятий,
+                  соответствующий статус и материально-техническое обеспечение,
+                  поручением Главы Государства (от 21 мая 2019 г.) АО «НК
+                  «QazExpoCongress» определена в качестве основного технического
+                  исполнителя и оператора бюджета МК-12. Деловой центр ЭКСПО -
+                  это кластер с единым архитектурным решением, который
+                  объединяет в себе деловые, образовательные,
+                  конгрессно-выставочные, а также развлекательные проекты в
+                  одном комплексе. Впервые за время проведения Министерских
+                  конференций, мероприятие будет проводиться на территории
+                  единого комплекса, где в пешей доступности находятся все
+                  объекты конференции, а также в удобных пространствах
+                  расположены отель, рестораны и кафе, в том числе Сфера
+                  «Нур-Алем», что делает удобным пребывание участников МК-12 на
+                  территории Делового центра ЭКСПО. Для проведения МК-12 ВТО
+                  определены 4 локации на территории делового центра ЭКСПО:
+                  Международный выставочный центр, Конгресс-центр, отель «Хилтон
+                  Астана» и МФЦА блок С.4.4.
+                </div>
+              </div>
+            </div>
+            <div class="description-card">
+              <div class="place-and-time d-flex">
+                <div class="place-and-time-element">
+                  <h4>Время</h4>
+                  <p>13:30 - 14:45</p>
+                </div>
+                <div class="place-and-time-element">
+                  <h4>Место проведения</h4>
+                  <p>Конгресс центр</p>
+                </div>
+              </div>
+              <div class="program-dropdown-content">
+                <h3 class="disabled-dropdown">
+                  Евразийский экономический союз для бизнеса: инвестиционные
+                  ожидания, возможности, перспективы
+                </h3>
+                <div class="dropdown-paragraph">
+                  Учитывая опыт в организации крупномасштабных мероприятий,
+                  соответствующий статус и материально-техническое обеспечение,
+                  поручением Главы Государства (от 21 мая 2019 г.) АО «НК
+                  «QazExpoCongress» определена в качестве основного технического
+                  исполнителя и оператора бюджета МК-12. Деловой центр ЭКСПО -
+                  это кластер с единым архитектурным решением, который
+                  объединяет в себе деловые, образовательные,
+                  конгрессно-выставочные, а также развлекательные проекты в
+                  одном комплексе. Впервые за время проведения Министерских
+                  конференций, мероприятие будет проводиться на территории
+                  единого комплекса, где в пешей доступности находятся все
+                  объекты конференции, а также в удобных пространствах
+                  расположены отель, рестораны и кафе, в том числе Сфера
+                  «Нур-Алем», что делает удобным пребывание участников МК-12 на
+                  территории Делового центра ЭКСПО. Для проведения МК-12 ВТО
+                  определены 4 локации на территории делового центра ЭКСПО:
+                  Международный выставочный центр, Конгресс-центр, отель «Хилтон
+                  Астана» и МФЦА блок С.4.4.
+                </div>
+              </div>
+            </div>
+            <div class="description-card">
+              <div class="place-and-time d-flex">
+                <div class="place-and-time-element">
+                  <h4>Время</h4>
+                  <p>11:00</p>
+                </div>
+                <div class="place-and-time-element">
+                  <h4>Место проведения</h4>
+                  <p>Отель Hilton Astana</p>
+                </div>
+              </div>
+              <div class="program-dropdown-content">
+                <h3 class="disabled-dropdown">
+                  Неформальная экономика. Цифровые платежи как фактор повышения
+                  экономической прозрачности
+                </h3>
+                <div class="dropdown-paragraph">
+                  Учитывая опыт в организации крупномасштабных мероприятий,
+                  соответствующий статус и материально-техническое обеспечение,
+                  поручением Главы Государства (от 21 мая 2019 г.) АО «НК
+                  «QazExpoCongress» определена в качестве основного технического
+                  исполнителя и оператора бюджета МК-12. Деловой центр ЭКСПО -
+                  это кластер с единым архитектурным решением, который
+                  объединяет в себе деловые, образовательные,
+                  конгрессно-выставочные, а также развлекательные проекты в
+                  одном комплексе. Впервые за время проведения Министерских
+                  конференций, мероприятие будет проводиться на территории
+                  единого комплекса, где в пешей доступности находятся все
+                  объекты конференции, а также в удобных пространствах
+                  расположены отель, рестораны и кафе, в том числе Сфера
+                  «Нур-Алем», что делает удобным пребывание участников МК-12 на
+                  территории Делового центра ЭКСПО. Для проведения МК-12 ВТО
+                  определены 4 локации на территории делового центра ЭКСПО:
+                  Международный выставочный центр, Конгресс-центр, отель «Хилтон
+                  Астана» и МФЦА блок С.4.4.
+                </div>
+              </div>
+            </div>
+            <button class="page-btn">Вся программа</button>
           </div>
         </div>
-      </div>
+      </section>
+      <section class="venues container">
+        <div class="venues-title">
+          <h2 class="page-h2">Места проведения</h2>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <div class="venues-gallery d-flex justify-content-between">
+          <div class="venue-card"></div>
+          <div class="venue-card"></div>
+          <div class="venue-card"></div>
+          <div class="venue-card"></div>
+        </div>
+      </section>
     </div>
-    <section class="about-conference container">
-      <div class="conference-content d-flex align-items-center justify-content-between">
-        <div class="conference-text">
-          <h2 class="page-h2">О конференции</h2>
-          <i class="fas fa-ellipsis-h"></i>
-          <p>18 октября 2018 года в Женеве в ходе заседания Генерального совета членами Всемирной торговой организации
-            единогласно принято решение о проведении 12-й Министерской конференции ВТО (далее – МК-12) 8-11 июня 2020
-            года в Республике Казахстан г. Нур-Султан. </p>
-          <p>29 октября 2019 г. в рамках визита Министра торговли и интеграции РК Б. Султанова в Женеву состоялось
-            подписание Соглашения между Казахстаном и ВТО о проведении МК-12 ВТО.  Генеральный директор ВТО Р. Азеведо
-            подчеркнул, что подписание Соглашения является четким сигналом приверженности Казахстана принципам
-            многосторонней торговой системы и правилам ВТО. </p>
-        </div>
-        <div class="conference-picture"></div>
-      </div>
-      <p>Учитывая опыт в организации крупномасштабных мероприятий, соответствующий статус и материально-техническое
-        обеспечение, поручением Главы Государства (от 21 мая 2019 г.) АО «НК «QazExpoCongress» определена в качестве
-        основного технического исполнителя и оператора бюджета МК-12.</p>
-      <p>Деловой центр ЭКСПО - это кластер с единым архитектурным решением, который объединяет в себе деловые,
-        образовательные, конгрессно-выставочные, а также развлекательные проекты в одном комплексе. </p>
-      <p>Впервые за время проведения Министерских конференций, мероприятие будет проводиться на территории единого
-        комплекса, где в пешей доступности находятся все объекты конференции, а также в удобных пространствах
-        расположены отель, рестораны и кафе, в том числе Сфера «Нур-Алем», что делает удобным пребывание участников
-        МК-12 на территории Делового центра ЭКСПО.
-        Для проведения МК-12 ВТО определены 4 локации на территории делового центра ЭКСПО: Международный выставочный
-        центр, Конгресс-центр, отель «Хилтон Астана» и МФЦА блок С.4.4.</p>
-    </section>
-  </main>
-  <div class="program-places-container">
-    <div class="aside-logo"></div>
-    <section class="conference-program container">
-      <div class="conference-program-head d-flex justify-content-between">
-        <div class="program-title">
-          <h2 class="page-h2">Программа конференции</h2>
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-        <button class="page-btn">Культурная программа</button>
-      </div>
-      <div class="conference-program-content d-flex flex-direction-col align-items-center">
-        <div class="program-dates d-flex justify-content-between">
-          <div>Среда 5.05.2020</div>
-          <div class="active-date">Четверг 6.05.2020</div>
-          <div>Пятница 7.05.2020</div>
-        </div>
-        <div class="program-descriptions d-flex flex-direction-col align-items-center">
-          <div class="description-card">
-            <div class="place-and-time d-flex">
-              <div class="place-and-time-element">
-                <h4>Время</h4>
-                <p>10:30 - 12:00</p>
-              </div>
-              <div class="place-and-time-element">
-                <h4>Место проведения</h4>
-                <p>Отель Hilton Astana</p>
-              </div>
-            </div>
-            <div class="program-dropdown-content">
-              <h3 class="active-dropdown">Замедление глобальной экономики: как избежать масштабной рецессии?</h3>
-              <div class="dropdown-paragraph">Учитывая опыт в организации крупномасштабных мероприятий,
-                соответствующий
-                статус и материально-техническое обеспечение, поручением Главы Государства (от 21 мая 2019 г.) АО «НК
-                «QazExpoCongress» определена в качестве основного технического исполнителя и оператора бюджета МК-12.
-                Деловой центр ЭКСПО - это кластер с единым архитектурным решением, который объединяет в себе деловые,
-                образовательные, конгрессно-выставочные, а также развлекательные проекты в одном комплексе.
-                Впервые за время проведения Министерских конференций, мероприятие будет проводиться на территории
-                единого
-                комплекса, где в пешей доступности находятся все объекты конференции, а также в удобных пространствах
-                расположены отель, рестораны и кафе, в том числе Сфера «Нур-Алем», что делает удобным пребывание
-                участников МК-12 на территории Делового центра ЭКСПО.
-                Для проведения МК-12 ВТО определены 4 локации на территории делового центра ЭКСПО: Международный
-                выставочный центр, Конгресс-центр, отель «Хилтон Астана» и МФЦА блок С.4.4. </div>
-            </div>
-          </div>
-          <div class="description-card">
-            <div class="place-and-time d-flex">
-              <div class="place-and-time-element">
-                <h4>Время</h4>
-                <p>13:30 - 14:45</p>
-              </div>
-              <div class="place-and-time-element">
-                <h4>Место проведения</h4>
-                <p>Конгресс центр</p>
-              </div>
-            </div>
-            <div class="program-dropdown-content">
-              <h3 class="disabled-dropdown">Евразийский экономический союз для бизнеса: инвестиционные ожидания,
-                возможности, перспективы
-              </h3>
-              <div class="dropdown-paragraph"></div>
-            </div>
-          </div>
-          <div class="description-card">
-            <div class="place-and-time d-flex">
-              <div class="place-and-time-element">
-                <h4>Время</h4>
-                <p>11:00</p>
-              </div>
-              <div class="place-and-time-element">
-                <h4>Место проведения</h4>
-                <p>Отель Hilton Astana</p>
-              </div>
-            </div>
-            <div class="program-dropdown-content">
-              <h3 class="disabled-dropdown">Неформальная экономика. Цифровые платежи как фактор повышения экономической
-                прозрачности</h3>
-              <div class="dropdown-paragraph"></div>
-            </div>
-          </div>
-          <button class="page-btn">Вся программа</button>
-        </div>
-      </div>
-    </section>
-    <section class="venues container">
-      <div class="venues-title">
-        <h2 class="page-h2">Места проведения</h2>
-        <i class="fas fa-ellipsis-h"></i>
-      </div>
-      <div class="venues-gallery d-flex justify-content-between">
-        <div class="venue-card"></div>
-        <div class="venue-card"></div>
-        <div class="venue-card"></div>
-        <div class="venue-card"></div>
-      </div>
-    </section>
-  </div>
-
-</body>
-
+  </body>
 </html>
