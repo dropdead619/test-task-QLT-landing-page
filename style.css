@@ -53,6 +53,21 @@ ul {
     max-width: 440px;
   }
 }
+@media (max-width: 576px) {
+  .container {
+    max-width: 440px;
+  }
+}
+@media (max-width: 440px) {
+  .container {
+    max-width: 340px;
+  }
+}
+@media (max-width: 375px) {
+  .container {
+    max-width: 280px;
+  }
+}
 
 .d-flex {
   display: flex;

@@ -44,6 +44,15 @@ ul {
   @media (max-width: 576px ) {
     max-width:  440px;
   }
+  @media (max-width: 576px ) {
+    max-width:  440px;
+  }
+  @media (max-width: 440px ) {
+    max-width:  340px;
+  }
+  @media (max-width: 375px ) {
+    max-width:  280px;
+  }
 }
 
 .d-flex {
